@@ -56,11 +56,12 @@ def main():
             
             herramienta.mostrar_datos(cantidad)
         elif opcion == 3:
+            print("-"*100)
             print("Mostrar datos estadísticos")
+            print("-"*100)
             
             herramienta.mostrar_datos_estadisticos()
         elif opcion == 4:
-            print("Salir")
             break
         else:
             print("Opción inválida")

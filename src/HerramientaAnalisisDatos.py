@@ -18,10 +18,14 @@ class HerramientaAnalisisDatos:
             if formato is None:
                 self.datos = pd.read_file(archivo, sep=separador)
             elif formato.lower() == 'csv':
+                # Se combina archivo + formato
+                archivo = archivo + '.' + formato
                 self.datos = pd.read_csv(archivo, sep=separador)
             elif formato.lower() in ['excel', 'xls', 'xlsx']:
+                archivo = archivo + '.' + formato
                 self.datos = pd.read_excel(archivo, sep=separador)
             elif formato.lower() == 'json':
+                archivo = archivo + '.' + formato
                 self.datos = pd.read_json(archivo, sep=separador)
             else:
                 print(f"Error: Formato no admitido: {formato}")
