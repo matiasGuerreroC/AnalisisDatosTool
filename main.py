@@ -9,6 +9,7 @@ def limpiarPantalla():
     os.system("cls")
     
 def pausar():
+    print()
     os.system("pause")
     
 def mostrarMenu():
